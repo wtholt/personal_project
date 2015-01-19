@@ -37,8 +37,19 @@ post '/new_member' do
 end
 
 get '/member/:id' do
-	@member = Member.get params
+	@member = Member.get params[:id]
 	erb :display_members
+end
+
+delete '/delete_member/:id' do 
+	@member = Member.get params[:id]
+	@member.destroy
+	redirect to '/'
+end
+
+get '/updatemember/:id' do 
+	@member = Member.get params[:id]
+	erb :update_member
 end
 
 

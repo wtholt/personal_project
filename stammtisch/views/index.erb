@@ -1,11 +1,12 @@
+<a href="/newmember">Create a new member</a>
+
 <ul>
 	<% @members.each do |member|%>
-		<li><%= member.name %></li>
+		<li><a href="/member/<%= member.id %>"><%= member.name %></a></li>
 		<br>
 		<li><%= member.email %></li>
 		<br>
 		<li><%= member.number %></li>
 		<br>
 	<% end %>
-
 </ul>

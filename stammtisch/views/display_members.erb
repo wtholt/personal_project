@@ -1,0 +1,11 @@
+<%= @member.name %>
+<br>
+<%= @member.email %>
+<br>
+<%= @member.number %>
+<br>
+
+<form action = "/delete_member/<%= @member.id %>" method = "post">
+	<input type = "hidden" name = "_method" value = "delete">
+	<input type = "submit" value = "Delete">
+</form>
